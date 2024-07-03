@@ -5,7 +5,7 @@ on:
 
 jobs:
   echo1:
-    runs-on: ubuntun-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Sleep for 10 seconds
         run: sleep 10
