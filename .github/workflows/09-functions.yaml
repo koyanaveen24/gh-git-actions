@@ -7,8 +7,8 @@ jobs:
   echo1:
     runs-on: ubuntun-latest
     steps:
-      - name: Sleep for 20 seconds
-        run: sleep 20
+      - name: Sleep for 10 seconds
+        run: sleep 10
       - name: Failing step
         run: exit 1
       - name: I will be skipped
@@ -20,4 +20,7 @@ jobs:
       - name: I will execute
         if: ${{!cancelled()}}
         run: "I will always print, except when the workflow is cancelled."
+      - name: I will execute
+        if: ${{cancelled()}}
+        run: "I will only print, when the workflow is cancelled."
       
