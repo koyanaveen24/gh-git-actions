@@ -5,7 +5,6 @@ on:
     inputs:
       pass-unit-tests:
         type: boolean
-        description: helps to skip the unit test
         default: false
 
 jobs:
