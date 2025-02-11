@@ -1,0 +1,18 @@
+name: 01-MyFirstWorkflow
+on: push
+
+jobs:
+ echo_hello:
+  runs-on : ubuntu-latest
+  steps:
+    - name: say_hello
+      run: echo "Hello GIT"
+    - name: checkOut
+      uses: actions/checkout@v4
+    - name: list_files
+      run: ls
+    - name: read_file
+      run: cat README.md
+      
+
+
